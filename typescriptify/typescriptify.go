@@ -427,7 +427,7 @@ func (t TypeScriptify) ConvertToFile(fileName string) error {
 		return err
 	}
 
-	if _, err := f.WriteString("/* Do not change, this code is generated from Golang structs */\n\n"); err != nil {
+	if _, err := f.WriteString("/* eslint-disable */\n/* Do not change, this code is generated from Golang structs */\n\n"); err != nil {
 		return err
 	}
 	if _, err := f.WriteString(converted); err != nil {
